@@ -1,12 +1,12 @@
 public class Sorts{
   public static void selectionSort(int[] data){
     for(int i = 0; i < data.length ; i++){
-      int min = data[i];
+      int min = data[i]; //set first to min
       for(int x = i; x< data.length; x++){
         if(data[x] < min){
-          min = data[x];
-          data[x] = data[i];
-          data[i] = min;
+          min = data[x]; //set the smaller num to min
+          data[x] = data[i]; // move num to front
+          data[i] = min; //move the front num to the old min position
         }
       }
     }
