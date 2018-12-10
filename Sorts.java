@@ -1,5 +1,19 @@
 public class Sorts{
-  public static void selectionSort(int[] data){
+  public static void selectionSort(int [] ary){
+    for(int i = 0; i < ary.length - 1; i++){
+      int min = ary[i]; //set random min
+      int ind = i;
+      for(int x = i; x < ary.length; x++){
+        if(ary[x] < min){ //find min
+          min = ary[x]; //min value
+          ind = x; //where the min is
+        }
+      }
+      ary[ind] = ary[i]; //switch min position with value of i
+      ary[i] = min; //puts min in the position
+    }
+  }
+  public static void bubbleSort(int[] data){
     for(int i = 0; i < data.length ; i++){
       int min = data[i]; //set first to min
       for(int x = i; x< data.length; x++){
