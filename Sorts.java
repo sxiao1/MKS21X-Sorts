@@ -1,4 +1,16 @@
 public class Sorts{
+  public static void insertionSort(int[] ary){
+    for(int i = 1; i < ary.length; i++){
+      int original = ary[i];
+      int index = i;
+      while(index > 0 && ary[index - 1] > ary[index]){
+	ary[index] = ary[index -1];
+	index --;
+      }
+      ary[index] = original;
+      System.out.println(printData(ary));
+    }
+  }
   public static void selectionSort(int [] ary){
     for(int i = 0; i < ary.length - 1; i++){
       int min = ary[i]; //set random min
@@ -48,7 +60,7 @@ public static void main(String[] args) {
     System.out.println(printData(test_a));
     // [3, 4, 7, 1, 6, 2, 8, 6]
 
-    selectionSort(test_a);
+    insertionSort(test_a);
 
     sorted = printData(test_a);
     System.out.println(sorted);
@@ -65,7 +77,7 @@ public static void main(String[] args) {
     System.out.println(printData(test_b));
     // [17, 1, 19, 2, 18, 20, 1, 18, 11, 13, 5, 17]
 
-    selectionSort(test_b);
+    insertionSort(test_b);
 
     sorted = printData(test_b);
     System.out.println(sorted);
@@ -82,7 +94,7 @@ public static void main(String[] args) {
     System.out.println(printData(test_c));
     // [14, 32, 19, 66, 61, 96, 33, 48, 30, 100, 65, 37, 15, 85, 1, 35, 9, 57, 50, 52]
 
-    selectionSort(test_c);
+    insertionSort(test_c);
 
     sorted = printData(test_c);
     System.out.println(sorted);
