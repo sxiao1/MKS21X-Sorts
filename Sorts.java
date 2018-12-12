@@ -1,16 +1,4 @@
 public class Sorts{
-  public static void insertionSort(int[] ary){
-    for(int i = 1; i < ary.length; i++){
-      int original = ary[i];
-      int index = i;
-      while(index > 0 && ary[index - 1] > ary[index]){
-	ary[index] = ary[index -1];
-	index --;
-      }
-      ary[index] = original;
-      System.out.println(printData(ary));
-    }
-  }
   public static void selectionSort(int [] ary){
     for(int i = 0; i < ary.length - 1; i++){
       int min = ary[i]; //set random min
@@ -38,6 +26,17 @@ public class Sorts{
     }
     System.out.println(printData(data));
   }
+public static void insertionSort(int[] data){
+  for(int i = 1; i < data.length; i++){
+    int temp = data[i];
+    int index = i;
+    while(index > 0 && data[index-1] > temp){
+      data[index] = data[index - 1];
+      index --;
+    }
+    data[index] = temp;
+  }
+}
 public static String printData(int[] data){
   String newstr = "[";
   for(int i = 0; i < data.length; i ++){
