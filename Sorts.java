@@ -24,7 +24,6 @@ public class Sorts{
         }
       }
     }
-    System.out.println(printData(data));
   }
 public static void insertionSort(int[] data){
   for(int i = 1; i < data.length; i++){
